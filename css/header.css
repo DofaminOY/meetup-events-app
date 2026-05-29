@@ -1,0 +1,274 @@
+/* =========================
+   Header
+========================= */
+
+.header {
+  width: 100%;
+  background-color: #ffffff;
+}
+
+.header__container {
+  width: 100%;
+  max-width: 1512px;
+  min-height: 64px;
+  margin: 0 auto;
+  padding: 0 24px;
+
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.header__logo {
+  width: 118.34px;
+  height: 34px;
+
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+
+  text-decoration: none;
+}
+
+.header__logo-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.header__search {
+  width: 100%;
+  max-width: 634px;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+}
+
+.header__search-field,
+.header__location-field {
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+
+  border: 1px solid #d9d9d9;
+  background-color: #ffffff;
+}
+
+.header__search-field {
+  width: 300px;
+  border-radius: 8px 0 0 8px;
+}
+
+.header__location-field {
+  width: 292px;
+  border-left: none;
+}
+
+.header__search-icon {
+  width: 22px;
+  height: 22px;
+  margin-left: 10px;
+  margin-right: 10px;
+
+  display: block;
+  flex-shrink: 0;
+}
+
+.header__search-input,
+.header__location-input {
+  width: 100%;
+  height: 100%;
+  padding: 0 8px;
+
+  border: none;
+  outline: none;
+
+  font-family: "Roboto", Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 100%;
+  color: #000000;
+  background-color: transparent;
+}
+
+.header__search-input::placeholder {
+  font-family: "Roboto", Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 100%;
+  color: #707070;
+}
+
+.header__search-button {
+  width: 42px;
+  height: 42px;
+  padding: 0;
+
+  border: none;
+  border-radius: 0 8px 8px 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: #f65858;
+  cursor: pointer;
+}
+
+.header__search-button-icon {
+  width: 16px;
+  height: 16px;
+  display: block;
+}
+
+.header__actions {
+  margin-left: auto;
+
+  display: flex;
+  align-items: center;
+  gap: 22px;
+
+  white-space: nowrap;
+}
+
+.header__language {
+  padding: 0;
+
+  border: none;
+  background-color: transparent;
+
+  display: flex;
+  align-items: center;
+  gap: 4px;
+
+  font-family: "Roboto", Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  color: #212121;
+
+  cursor: pointer;
+}
+
+.header__earth-icon {
+  width: 16.67px;
+  height: 16.67px;
+  display: block;
+}
+
+.header__login {
+  font-family: "Roboto", Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  color: #212121;
+  text-decoration: none;
+}
+
+.header__signup {
+  padding: 8px 16px;
+
+  border-radius: 8px;
+  background-color: #00798a;
+  color: #ffffff;
+
+  font-family: "Roboto", Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  text-decoration: none;
+}
+
+/* =========================
+   Header adaptive
+========================= */
+
+@media (max-width: 1024px) {
+  .header__container {
+    padding: 0 16px;
+    gap: 16px;
+  }
+
+  .header__search {
+    max-width: 544px;
+  }
+
+  .header__search-field {
+    width: 272px;
+  }
+
+  .header__location-field {
+    width: 240px;
+  }
+
+  .header__actions {
+    gap: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .header__container {
+    flex-wrap: wrap;
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+
+  .header__search {
+    order: 3;
+    max-width: none;
+    width: 100%;
+  }
+
+  .header__search-field,
+  .header__location-field {
+    flex: 1;
+    width: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .header__container {
+    gap: 12px;
+  }
+
+  .header__logo {
+    width: 96px;
+  }
+
+  .header__language,
+  .header__login {
+    display: none;
+  }
+
+  .header__signup {
+    padding: 8px 12px;
+  }
+
+  .header__search {
+    height: auto;
+    flex-direction: column;
+  }
+
+  .header__search-field,
+  .header__location-field {
+    width: 100%;
+    height: 42px;
+    border: 1px solid #d9d9d9;
+  }
+
+  .header__search-field {
+    border-radius: 8px 8px 0 0;
+  }
+
+  .header__location-field {
+    border-top: none;
+    border-radius: 0;
+  }
+
+  .header__search-button {
+    width: 100%;
+    border-radius: 0 0 8px 8px;
+  }
+}
