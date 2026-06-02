@@ -1,0 +1,411 @@
+/* =========================
+   Info sections
+========================= */
+
+.join-section,
+.info-sections {
+  width: 100%;
+  background-color: #ffffff;
+}
+
+.join-section {
+  padding: 0 0 64px;
+}
+
+.info-sections {
+  padding: 0 0 64px;
+}
+
+.join-section__container,
+.info-sections__container {
+  width: 100%;
+  max-width: 1196px;
+  margin: 0 auto;
+}
+
+.join-section__container {
+  min-height: 236px;
+  padding: 36px 56px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 48px;
+
+  border-radius: 8px;
+  background-color: rgba(151, 202, 209, 0.08);
+}
+
+.join-section__content {
+  width: 100%;
+  max-width: 740px;
+}
+
+.join-section__title,
+.info-sections__title {
+  margin: 0 0 24px;
+
+  font-family: "Roboto", Arial, sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 36px;
+  color: #212121;
+}
+
+.join-section__title {
+  margin-bottom: 16px;
+}
+
+.join-section__text,
+.info-sections__text,
+.how-meetup__text,
+.article-card__text {
+  font-family: "Roboto", Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.join-section__text {
+  margin: 0 0 16px;
+  color: #212121;
+}
+
+.info-sections__text {
+  margin: -8px 0 28px;
+  color: #707070;
+}
+
+.join-section__button {
+  width: 192px;
+  height: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 8px;
+  background-color: #e32359;
+  color: #ffffff;
+
+  font-family: "Roboto", Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  text-decoration: none;
+}
+
+.join-section__image {
+  width: 341px;
+  height: 196px;
+  display: block;
+  flex-shrink: 0;
+  object-fit: contain;
+}
+
+.categories,
+.cities,
+.how-meetup {
+  margin-bottom: 64px;
+}
+
+.categories__list,
+.cities__list,
+.how-meetup__list,
+.articles__list {
+  display: grid;
+}
+
+.categories__list {
+  grid-template-columns: repeat(8, 1fr);
+  gap: 16px;
+}
+
+.categories__item {
+  min-height: 112px;
+  padding: 20px 12px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  border-radius: 8px;
+  background-color: rgba(151, 202, 209, 0.08);
+
+  font-family: "Roboto", Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  color: #212121;
+  text-align: center;
+  text-decoration: none;
+}
+
+.categories__icon {
+  width: 20px;
+  height: 20px;
+  display: block;
+  object-fit: contain;
+}
+
+.cities__list {
+  grid-template-columns: repeat(5, 1fr);
+  gap: 40px;
+}
+
+.cities__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  color: #212121;
+  text-decoration: none;
+}
+
+.cities__image {
+  width: 205px;
+  height: 205px;
+  margin-bottom: 24px;
+
+  display: block;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.cities__title {
+  margin: 0;
+
+  font-family: "Roboto", Arial, sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 28px;
+  color: #212121;
+  text-align: center;
+}
+
+.how-meetup__list {
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+}
+
+.how-meetup__item {
+  min-height: 180px;
+  padding: 32px 40px;
+
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+
+  border-radius: 8px;
+  background-color: rgba(151, 202, 209, 0.08);
+
+  text-decoration: none;
+}
+
+.how-meetup__icon {
+  width: 41px;
+  height: 41px;
+  display: block;
+  flex-shrink: 0;
+  object-fit: contain;
+}
+
+.how-meetup__content {
+  width: 100%;
+}
+
+.how-meetup__title {
+  margin: 0 0 8px;
+
+  font-family: "Roboto", Arial, sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 28px;
+  color: #212121;
+}
+
+.how-meetup__text {
+  margin: 0 0 16px;
+  color: #212121;
+}
+
+.how-meetup__link,
+.article-card__link {
+  font-family: "Roboto", Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  color: #00798a;
+}
+
+.article-card__link {
+  text-decoration: none;
+}
+
+.articles__text {
+  max-width: 890px;
+}
+
+.articles__list {
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+.article-card {
+  width: 100%;
+}
+
+.article-card__image {
+  width: 100%;
+  height: 191.5px;
+  margin-bottom: 24px;
+
+  display: block;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.article-card__title {
+  margin: 0 0 12px;
+
+  font-family: "Roboto", Arial, sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 28px;
+  color: #212121;
+}
+
+.article-card__text {
+  margin: 0 0 16px;
+  color: #707070;
+}
+
+/* =========================
+   Info sections adaptive
+========================= */
+
+@media (max-width: 1280px) {
+  .join-section,
+  .info-sections {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .categories__list {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .cities__list {
+    gap: 28px;
+  }
+
+  .cities__image {
+    width: 170px;
+    height: 170px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .join-section__container {
+    padding: 32px;
+  }
+
+  .join-section__image {
+    width: 280px;
+    height: auto;
+  }
+
+  .cities__list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .articles__list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .join-section__container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .join-section__image {
+    align-self: center;
+  }
+
+  .how-meetup__list {
+    grid-template-columns: 1fr;
+  }
+
+  .how-meetup__item {
+    padding: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .join-section {
+    padding: 0 16px 48px;
+  }
+
+  .join-section__container {
+    padding: 24px 16px;
+    gap: 24px;
+  }
+
+  .join-section__title,
+  .info-sections__title {
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  .join-section__button {
+    width: 100%;
+  }
+
+  .join-section__image {
+    width: 100%;
+    max-width: 280px;
+  }
+
+  .info-sections {
+    padding: 0 16px 48px;
+  }
+
+  .categories,
+  .cities,
+  .how-meetup {
+    margin-bottom: 48px;
+  }
+
+  .categories__list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .cities__list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  .cities__image {
+    width: 130px;
+    height: 130px;
+    margin-bottom: 12px;
+  }
+
+  .cities__title {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .how-meetup__item {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .articles__list {
+    grid-template-columns: 1fr;
+  }
+}
