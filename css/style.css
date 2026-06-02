@@ -23,9 +23,6 @@ body {
   background-color: #ffffff;
 }
 
-.container {
+.main {
   width: 100%;
-  max-width: 1512px;
-  margin: 0 auto;
-  padding: 0 120px;
 }
