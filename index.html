@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/header.css" />
     <link rel="stylesheet" href="./css/hero.css" />
+    <link rel="stylesheet" href="./css/events.css" />
   </head>
   <body>
     <div class="page">
@@ -101,9 +102,41 @@
             </div>
           </div>
         </section>
+        <section class="events">
+          <div class="events__container">
+            <div class="events__top">
+              <div class="events__title-box">
+                <h2 class="events__title">Events near</h2>
+
+                <a class="events__location" href="#">
+                  <span>Mountain View, CA</span>
+                  <span class="events__location-icon">✎</span>
+                </a>
+              </div>
+
+              <a class="events__link" href="./index2.html">See all events</a>
+            </div>
+
+            <div class="events__grid" id="eventsNearGrid"></div>
+          </div>
+        </section>
+
+        <section class="events events--online">
+          <div class="events__container">
+            <div class="events__top">
+              <div class="events__title-box">
+                <h2 class="events__title">Upcoming online events</h2>
+              </div>
+
+              <a class="events__link" href="./index2.html">See all events</a>
+            </div>
+
+            <div class="events__grid" id="onlineEventsGrid"></div>
+          </div>
+        </section>
       </main>
     </div>
 
-    <script src="./js/index.js"></script>
+    <script type="module" src="./js/index.js"></script>
   </body>
 </html>
