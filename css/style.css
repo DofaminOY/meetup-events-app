@@ -2,6 +2,24 @@
    General styles
 ========================= */
 
+:root {
+  --color-dark: #212121;
+  --color-black: #000000;
+  --color-white: #ffffff;
+  --color-gray: #707070;
+  --color-border: #d9d9d9;
+  --color-primary: #00798a;
+  --color-accent: #f65858;
+  --color-light-bg: #f6f7f8;
+  --color-location-bg: rgba(151, 202, 209, 0.12);
+
+  --font-main: "Roboto", Arial, sans-serif;
+
+  --container-width: 1196px;
+  --page-width: 1512px;
+  --radius-small: 8px;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -12,15 +30,15 @@ html {
 
 body {
   margin: 0;
-  font-family: "Roboto", Arial, sans-serif;
-  color: #212121;
-  background-color: #ffffff;
+  font-family: var(--font-main);
+  color: var(--color-dark);
+  background-color: var(--color-white);
 }
 
 .page {
   width: 100%;
   min-height: 100vh;
-  background-color: #ffffff;
+  background-color: var(--color-white);
 }
 
 .main {

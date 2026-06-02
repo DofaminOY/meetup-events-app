@@ -5,7 +5,7 @@
 .events {
   width: 100%;
   padding: 0 0 96px;
-  background-color: #ffffff;
+  background-color: var(--color-white);
 }
 
 .events--online {
@@ -14,7 +14,7 @@
 
 .events__container {
   width: 100%;
-  max-width: 1196px;
+  max-width: var(--container-width);
   margin: 0 auto;
 }
 
@@ -35,11 +35,10 @@
 .events__title {
   margin: 0;
 
-  font-family: "Roboto", Arial, sans-serif;
   font-size: 28px;
   font-weight: 700;
   line-height: 36px;
-  color: #212121;
+  color: var(--color-dark);
 }
 
 .events__location {
@@ -50,14 +49,13 @@
   align-items: center;
   gap: 12px;
 
-  border-radius: 8px;
-  background-color: rgba(151, 202, 209, 0.12);
+  border-radius: var(--radius-small);
+  background-color: var(--color-location-bg);
 
-  font-family: "Roboto", Arial, sans-serif;
   font-size: 20px;
   font-weight: 600;
   line-height: 28px;
-  color: #00798a;
+  color: var(--color-primary);
   text-decoration: none;
 }
 
@@ -67,11 +65,10 @@
 }
 
 .events__link {
-  font-family: "Roboto", Arial, sans-serif;
   font-size: 16px;
   font-weight: 500;
   line-height: 24px;
-  color: #00798a;
+  color: var(--color-primary);
   text-decoration: none;
 }
 
@@ -92,8 +89,8 @@
   margin-bottom: 12px;
 
   overflow: hidden;
-  border-radius: 8px;
-  background-color: #f6f7f8;
+  border-radius: var(--radius-small);
+  background-color: var(--color-light-bg);
 }
 
 .event-card__image {
@@ -106,53 +103,45 @@
 .event-card__title {
   margin: 0 0 8px;
 
-  font-family: "Roboto", Arial, sans-serif;
   font-size: 20px;
   font-weight: 600;
   line-height: 24px;
-  color: #212121;
+  color: var(--color-dark);
 }
 
 .event-card__category {
   margin: 0 0 12px;
 
-  font-family: "Roboto", Arial, sans-serif;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 20px;
-  color: #707070;
+  color: var(--color-gray);
 }
 
 .event-card__date {
   margin: 0 0 8px;
-
-  display: flex;
-  align-items: center;
-  gap: 6px;
-
-  font-family: "Roboto", Arial, sans-serif;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 20px;
-  color: #212121;
 }
 
-.event-card__info {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-}
-
+.event-card__date,
+.event-card__info,
 .event-card__info-item {
   display: flex;
   align-items: center;
-  gap: 6px;
+}
 
-  font-family: "Roboto", Arial, sans-serif;
+.event-card__date,
+.event-card__category,
+.event-card__info-item {
   font-size: 14px;
   font-weight: 400;
   line-height: 20px;
-  color: #212121;
+}
+
+.event-card__date,
+.event-card__info-item {
+  gap: 6px;
+  color: var(--color-dark);
+}
+
+.event-card__info {
+  gap: 16px;
 }
 
 .event-card__icon {
