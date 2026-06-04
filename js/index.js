@@ -1,4 +1,8 @@
 import { getEvents } from "./eventsStore.js";
+import { renderHeader, renderFooter } from "./layout.js";
+
+renderHeader();
+renderFooter();
 
 const eventsNearGrid = document.querySelector("#eventsNearGrid");
 const onlineEventsGrid = document.querySelector("#onlineEventsGrid");
