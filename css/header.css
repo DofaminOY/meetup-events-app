@@ -260,3 +260,64 @@
     border-radius: 0 0 var(--radius-small) var(--radius-small);
   }
 }
+
+@media (max-width: 430px) {
+  .header__container {
+    min-height: auto;
+    padding: 12px 20px 0;
+    gap: 16px;
+  }
+
+  .header__logo {
+    width: 113px;
+    height: 32px;
+  }
+
+  .header__actions {
+    margin-left: auto;
+    gap: 14px;
+  }
+
+  .header__language {
+    display: flex;
+  }
+
+  .header__login {
+    display: inline-block;
+  }
+
+  .header__language,
+  .header__login,
+  .header__signup {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .header__signup {
+    padding: 8px 16px;
+  }
+
+  .header__search {
+    width: 100%;
+    max-width: none;
+    height: 42px;
+    flex-direction: row;
+  }
+
+  .header__search-field {
+    width: auto;
+    flex: 1;
+    border-radius: var(--radius-small) 0 0 var(--radius-small);
+  }
+
+  .header__location-field {
+    display: none;
+  }
+
+  .header__search-button {
+    width: 64px;
+    height: 42px;
+    flex-shrink: 0;
+    border-radius: 0 var(--radius-small) var(--radius-small) 0;
+  }
+}
