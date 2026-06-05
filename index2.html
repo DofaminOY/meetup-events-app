@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Meetup Events App</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/header.css" />
+    <link rel="stylesheet" href="./css/footer.css" />
+    <link rel="stylesheet" href="./css/events-page.css" />
+  </head>
+
+  <body>
+    <div class="page">
+      <div id="header"></div>
+
+      <main class="main">
+        <section class="events-page">
+          <div class="events-page__container">
+            <div class="events-page__content">
+              <div class="events-page__main">
+                <h1 class="events-page__title">Events near New York, NY</h1>
+
+                <a class="events-page__tab" href="#">Events</a>
+
+                <div class="events-page__filters">
+                  <select class="events-page__filter" id="typeFilter">
+                    <option value="all">Any type</option>
+                    <option value="online">Online</option>
+                    <option value="offline">Offline</option>
+                  </select>
+
+                  <select class="events-page__filter" id="distanceFilter">
+                    <option value="all">Any distance</option>
+                    <option value="5">5 km</option>
+                    <option value="10">10 km</option>
+                    <option value="25">25 km</option>
+                    <option value="50">50 km</option>
+                  </select>
+
+                  <select class="events-page__filter" id="categoryFilter">
+                    <option value="all">Any category</option>
+                    <option value="Business">Business</option>
+                    <option value="Technology">Technology</option>
+                    <option value="Hobbies and Passions">
+                      Hobbies and Passions
+                    </option>
+                    <option value="Social Activities">Social Activities</option>
+                    <option value="Health and Wellbeing">
+                      Health and Wellbeing
+                    </option>
+                  </select>
+                </div>
+
+                <div class="events-page__list" id="eventsList"></div>
+              </div>
+
+              <aside class="events-page__aside">
+                <p class="events-page__map-text">Find events near</p>
+                <h2 class="events-page__map-title">New York, NY</h2>
+
+                <div class="events-page__map">
+                  <img
+                    class="events-page__map-img"
+                    src="./assets/svg/map-thumbnail.svg"
+                    alt="Map"
+                  />
+
+                  <button class="events-page__map-button" type="button">
+                    <span>Browse in map</span>
+                    <img
+                      class="events-page__map-icon"
+                      src="./assets/svg/expandMapIcon.svg"
+                      alt=""
+                    />
+                  </button>
+                </div>
+              </aside>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <div id="footer"></div>
+    </div>
+
+    <script type="module" src="./js/eventsPage.js"></script>
+  </body>
+</html>
