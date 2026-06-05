@@ -409,3 +409,33 @@
     grid-template-columns: 1fr;
   }
 }
+@media (max-width: 430px) {
+  .join-section__container {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .join-section__content {
+    display: contents;
+  }
+
+  .join-section__title {
+    order: 1;
+  }
+
+  .join-section__image {
+    order: 2;
+    width: 100%;
+    max-width: 215px;
+    height: auto;
+    margin: 0 auto 16px;
+  }
+
+  .join-section__text {
+    order: 3;
+  }
+
+  .join-section__button {
+    order: 4;
+  }
+}
