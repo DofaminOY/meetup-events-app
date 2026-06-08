@@ -1,3 +1,4 @@
+// Хранилище данных со списком событий
 export const eventsStore = [
   {
     title: "Day Trading Idea and Strategy",
@@ -144,12 +145,13 @@ export const eventsStore = [
     section: "online",
   },
 ];
-
-export const getEvents = () => {
-  return new Promise((resolve) => {
-    setTimeout(() => {
-      resolve(eventsStore);
-    }, 300);
+// Имитация получения данных с сервера
+export const getEvents = async () => {
+  // Небольшая задержка для имитации асинхронной загрузки
+  await new Promise((resolve) => {
+    setTimeout(resolve, 300);
   });
-};
 
+  // Возврат массива событий
+  return eventsStore;
+};
