@@ -153,13 +153,8 @@
 
 .header__earth-icon {
   width: 16.67px;
-  min-width: 16.67px;
   height: 16.67px;
-  min-height: 16.67px;
   display: block;
-  flex: 0 0 16.67px;
-  object-fit: contain;
-  aspect-ratio: 1 / 1;
 }
 
 .header__login {
@@ -198,6 +193,25 @@
 
   .header__actions {
     gap: 16px;
+  }
+}
+@media (max-width: 900px) {
+  .header__container {
+    flex-wrap: wrap;
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+
+  .header__search {
+    order: 3;
+    max-width: none;
+    width: 100%;
+  }
+
+  .header__search-field,
+  .header__location-field {
+    flex: 1;
+    width: auto;
   }
 }
 

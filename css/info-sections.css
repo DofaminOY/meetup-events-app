@@ -336,6 +336,10 @@
     align-self: center;
   }
 
+  .cities__list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
   .how-meetup__list {
     grid-template-columns: 1fr;
   }
