@@ -242,4 +242,9 @@ export const renderFooter = () => {
       </div>
     </footer>
   `;
+  const headerSearch = header.querySelector(".header__search");
+
+  headerSearch.addEventListener("submit", (event) => {
+    event.preventDefault();
+  });
 };
