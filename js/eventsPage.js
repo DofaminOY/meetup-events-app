@@ -22,6 +22,12 @@ const distanceFilter = document.querySelector("#distanceFilter");
 // Фильтр по категории события
 const categoryFilter = document.querySelector("#categoryFilter");
 
+// Форма поиска в хедере
+const headerSearchForm = document.querySelector(".header__search");
+
+// Поле поиска событий в хедере
+const headerSearchInput = document.querySelector(".header__search-input");
+
 // Переменная для хранения всех событий после получения данных
 let allEvents = [];
 
@@ -123,6 +129,9 @@ const filterEvents = () => {
   // Получение выбранной категории
   const selectedCategory = categoryFilter.value;
 
+  // Получение текста из поля поиска
+  const searchValue = headerSearchInput.value.trim().toLowerCase();
+
   // Создание нового массива событий после применения фильтров
   const filteredEvents = allEvents.filter((event) => {
     const isTypeMatch =
@@ -134,7 +143,10 @@ const filterEvents = () => {
     const isCategoryMatch =
       selectedCategory === "all" || event.category === selectedCategory;
 
-    return isTypeMatch && isDistanceMatch && isCategoryMatch;
+    const isSearchMatch =
+      searchValue === "" || event.title.toLowerCase().includes(searchValue);
+
+    return isTypeMatch && isDistanceMatch && isCategoryMatch && isSearchMatch;
   });
 
   // Рендер отфильтрованных событий
@@ -160,6 +172,15 @@ const initEventsPage = async () => {
 
   // Запуск фильтрации при изменении категории
   categoryFilter.addEventListener("change", filterEvents);
+
+  // Запуск поиска при отправке формы поиска
+  headerSearchForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+    filterEvents();
+  });
+
+  // Запуск поиска при вводе текста
+  headerSearchInput.addEventListener("input", filterEvents);
 };
 
 // Запуск инициализации страницы событий
