@@ -1,10 +1,14 @@
+// Рендер общего хедера
 export const renderHeader = () => {
+  // Поиск контейнера для хедера
   const header = document.querySelector("#header");
 
+  // Проверка наличия контейнера на странице
   if (!header) {
     return;
   }
 
+  // Вставка HTML-разметки хедера в контейнер
   header.innerHTML = `
     <header class="header">
       <div class="header__container">
@@ -66,13 +70,17 @@ export const renderHeader = () => {
   `;
 };
 
+// Рендер общего футера
 export const renderFooter = () => {
+  // Поиск контейнера для футера
   const footer = document.querySelector("#footer");
 
+  // Проверка наличия контейнера на странице
   if (!footer) {
     return;
   }
 
+  // Вставка HTML-разметки футера в контейнер
   footer.innerHTML = `
     <footer class="footer">
       <div class="footer__container">
