@@ -413,6 +413,7 @@
   .join-section__container {
     display: grid;
     grid-template-columns: 1fr;
+    gap: 16px;
   }
 
   .join-section__content {
@@ -421,6 +422,7 @@
 
   .join-section__title {
     order: 1;
+    margin-bottom: 0;
   }
 
   .join-section__image {
@@ -428,14 +430,17 @@
     width: 100%;
     max-width: 215px;
     height: auto;
-    margin: 0 auto 16px;
+    margin: 0 auto;
   }
 
   .join-section__text {
     order: 3;
+    margin-bottom: 0;
   }
 
   .join-section__button {
     order: 4;
+    width: 192px;
+    margin: 0 auto;
   }
 }
