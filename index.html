@@ -56,7 +56,15 @@
 
                 <a class="events__location" href="#">
                   <span>Mountain View, CA</span>
-                  <span class="events__location-icon">✎</span>
+                  <img
+                    class="events__location-icon"
+                    src="./assets/svg/events/Vector.svg"
+                    alt=""
+                    onerror="
+                      this.style.display = 'none';
+                      this.nextElementSibling.style.display = 'inline';
+                    "
+                  />
                 </a>
               </div>
 
