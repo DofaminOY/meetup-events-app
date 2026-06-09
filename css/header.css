@@ -313,10 +313,13 @@
     padding: 8px 16px;
   }
 
-  .header__search {
-    width: 100%;
-    max-width: none;
+    .header__search {
+    width: 342px;
+    max-width: calc(100vw - 40px);
     height: 42px;
+    margin: 0;
+    flex: 0 0 auto;
+    align-self: flex-start;
     flex-direction: row;
   }
 
@@ -331,7 +334,7 @@
   }
 
   .header__search-button {
-    width: 64px;
+    width: 42px;
     height: 42px;
     flex-shrink: 0;
     border-radius: 0 var(--radius-small) var(--radius-small) 0;
