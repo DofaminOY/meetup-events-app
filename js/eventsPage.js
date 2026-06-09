@@ -67,6 +67,21 @@ const createEventItem = (event) => {
     ? `<span class="events-page__item-spots">${event.spotsLeft} spots left</span>`
     : "";
 
+  // Проверка онлайн-события
+  const eventTypeText =
+    event.type === "online"
+      ? `
+        <span class="events-page__item-type">
+          <img
+            class="events-page__item-type-icon"
+            src="./assets/svg/events/online.svg"
+            alt=""
+          >
+          <span>Online Event</span>
+        </span>
+      `
+      : "";
+
   return `
     <article class="events-page__item">
       <div class="events-page__item-image-box">
@@ -90,6 +105,8 @@ const createEventItem = (event) => {
           ${event.category} (${event.distance} km)
         </p>
 
+        ${eventTypeText}
+
         <div class="events-page__item-info">
           <span>${attendeesText}</span>
           ${spotsText}
@@ -98,7 +115,6 @@ const createEventItem = (event) => {
     </article>
   `;
 };
-
 // Рендер списка событий на второй странице
 const renderEventsPage = (events) => {
   // Проверка наличия контейнера на странице
@@ -134,8 +150,7 @@ const filterEvents = () => {
 
   // Создание нового массива событий после применения фильтров
   const filteredEvents = allEvents.filter((event) => {
-    const isTypeMatch =
-      selectedType === "all" || event.type === selectedType;
+    const isTypeMatch = selectedType === "all" || event.type === selectedType;
 
     const isDistanceMatch =
       selectedDistance === "all" || event.distance <= Number(selectedDistance);

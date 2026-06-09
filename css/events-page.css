@@ -139,6 +139,27 @@
   line-height: 20px;
   color: var(--color-gray);
 }
+.events-page__item-type {
+  margin: -12px 0 12px;
+
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+  font-family: var(--font-main);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  color: var(--color-gray);
+}
+
+.events-page__item-type-icon {
+  width: 16px;
+  height: 16px;
+  display: block;
+  flex-shrink: 0;
+  object-fit: contain;
+}
 
 .events-page__item-info {
   display: flex;
