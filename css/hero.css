@@ -157,4 +157,8 @@
   .hero__button {
     display: none;
   }
+  .hero__title {
+    font-size: 25px;
+    line-height: 30px;
+  }
 }
