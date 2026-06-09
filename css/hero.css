@@ -154,11 +154,23 @@
 }
 
 @media (max-width: 430px) {
-  .hero__button {
-    display: none;
-  }
   .hero__title {
     font-size: 25px;
     line-height: 30px;
+  }
+
+  .hero__text {
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  .hero__button {
+    display: none;
+  }
+
+  .hero__image-box {
+    width: 215px;
+    height: auto;
+    margin: 0 auto;
   }
 }
