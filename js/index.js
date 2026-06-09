@@ -41,8 +41,63 @@ const formatEventDate = (date) => {
   return `${weekDay}, ${month} ${day} · ${time} PDT`;
 };
 
+// Форматирование даты события для мобильной версии
+const formatEventDateMobile = (date) => {
+  // Получение сокращенного названия дня недели
+  const weekDay = date
+    .toLocaleDateString("en-US", { weekday: "short" })
+    .toUpperCase();
+
+  // Получение сокращенного названия месяца
+  const month = date
+    .toLocaleDateString("en-US", { month: "short" })
+    .toUpperCase();
+
+  // Получение числа месяца
+  const day = date.getDate();
+
+  // Получение времени события
+  const time = date.toLocaleTimeString("en-US", {
+    hour: "numeric",
+    minute: "2-digit",
+  });
+
+  // Возврат даты в формате, который используется на мобильной версии
+  return `${weekDay}, ${month} ${day} · ${time} UTC`;
+};
+
 // Создание HTML-разметки одной карточки события
 const createEventCard = (event) => {
+  // Проверка онлайн-события для бейджа на картинке
+  const eventTypeBadge =
+    event.type === "online"
+      ? `
+        <p class="event-card__type event-card__type--badge">
+          <img
+            class="event-card__type-icon"
+            src="./assets/svg/events/online.svg"
+            alt=""
+          >
+          <span>Online Event</span>
+        </p>
+      `
+      : "";
+
+  // Проверка онлайн-события для текста на мобильной версии
+  const eventTypeText =
+    event.type === "online"
+      ? `
+        <p class="event-card__type event-card__type--text">
+          <img
+            class="event-card__type-icon"
+            src="./assets/svg/events/online.svg"
+            alt=""
+          >
+          <span>Online Event</span>
+        </p>
+      `
+      : "";
+
   return `
     <article class="event-card">
       <div class="event-card__image-box">
@@ -51,41 +106,52 @@ const createEventCard = (event) => {
           src="${event.image.trim()}"
           alt="${event.title}"
         >
+
+        ${eventTypeBadge}
       </div>
 
-      <h3 class="event-card__title">${event.title}</h3>
+      <div class="event-card__content">
+        <h3 class="event-card__title">${event.title}</h3>
 
-      <p class="event-card__category">
-        ${event.category} (${event.distance} km)
-      </p>
+        <p class="event-card__category">
+          ${event.category} (${event.distance} km)
+        </p>
 
-      <p class="event-card__date">
-        <img
-          class="event-card__icon"
-          src="./assets/svg/events/1.svg"
-          alt=""
-        >
-        <span>${formatEventDate(event.date)}</span>
-      </p>
+        ${eventTypeText}
 
-      <div class="event-card__info">
-        <span class="event-card__info-item">
+        <p class="event-card__date">
           <img
             class="event-card__icon"
-            src="./assets/svg/events/2.svg"
+            src="./assets/svg/events/1.svg"
             alt=""
           >
-          <span>${event.attendees ?? 0} going</span>
-        </span>
+          <span class="event-card__date-text event-card__date-text--desktop">
+            ${formatEventDate(event.date)}
+          </span>
+          <span class="event-card__date-text event-card__date-text--mobile">
+            ${formatEventDateMobile(event.date)}
+          </span>
+        </p>
 
-        <span class="event-card__info-item">
-          <img
-            class="event-card__icon"
-            src="./assets/svg/events/3.svg"
-            alt=""
-          >
-          <span>Free</span>
-        </span>
+        <div class="event-card__info">
+          <span class="event-card__info-item">
+            <img
+              class="event-card__icon"
+              src="./assets/svg/events/2.svg"
+              alt=""
+            >
+            <span>${event.attendees ?? 0} going</span>
+          </span>
+
+          <span class="event-card__info-item">
+            <img
+              class="event-card__icon"
+              src="./assets/svg/events/3.svg"
+              alt=""
+            >
+            <span>Free</span>
+          </span>
+        </div>
       </div>
     </article>
   `;
