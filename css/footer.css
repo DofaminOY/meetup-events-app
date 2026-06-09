@@ -254,18 +254,20 @@
     padding-bottom: 36px;
     align-items: center;
     flex-direction: row;
-    gap: 24px;
+    justify-content: space-between;
+    gap: 12px;
   }
 
   .footer__top-text {
     font-size: 16px;
     line-height: 24px;
+    white-space: nowrap;
   }
 
   .footer__top-button {
-    min-width: 128px;
-    min-height: 48px;
-    padding: 10px 16px;
+    min-width: 113px;
+    min-height: 44px;
+    padding: 10px 14px;
     flex-shrink: 0;
   }
 

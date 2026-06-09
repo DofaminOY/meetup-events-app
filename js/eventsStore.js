@@ -56,6 +56,7 @@ export const eventsStore = [
       "https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1200&auto=format&fit=crop",
     type: "offline",
     attendees: 29,
+    spotsLeft: 2,
     category: "Technology",
     distance: 5,
     section: "near",
