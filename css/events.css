@@ -216,3 +216,31 @@
     row-gap: 32px;
   }
 }
+@media (max-width: 430px) {
+  .events__top {
+    margin-bottom: 20px;
+  }
+
+  .events__title-box {
+    gap: 8px;
+  }
+
+  .events__title {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  .events__location {
+    min-height: 30px;
+    padding: 4px 8px;
+
+    gap: 8px;
+
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .events__location-icon {
+    font-size: 12px;
+  }
+}
