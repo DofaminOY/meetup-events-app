@@ -115,6 +115,7 @@ const createEventItem = (event) => {
     </article>
   `;
 };
+
 // Рендер списка событий на второй странице
 const renderEventsPage = (events) => {
   // Проверка наличия контейнера на странице
@@ -146,7 +147,9 @@ const filterEvents = () => {
   const selectedCategory = categoryFilter.value;
 
   // Получение текста из поля поиска
-  const searchValue = headerSearchInput.value.trim().toLowerCase();
+  const searchValue = headerSearchInput
+    ? headerSearchInput.value.trim().toLowerCase()
+    : "";
 
   // Создание нового массива событий после применения фильтров
   const filteredEvents = allEvents.filter((event) => {
@@ -188,14 +191,16 @@ const initEventsPage = async () => {
   // Запуск фильтрации при изменении категории
   categoryFilter.addEventListener("change", filterEvents);
 
-  // Запуск поиска при отправке формы поиска
-  headerSearchForm.addEventListener("submit", (event) => {
-    event.preventDefault();
-    filterEvents();
-  });
+  if (headerSearchForm && headerSearchInput) {
+    // Запуск поиска при отправке формы поиска
+    headerSearchForm.addEventListener("submit", (event) => {
+      event.preventDefault();
+      filterEvents();
+    });
 
-  // Запуск поиска при вводе текста
-  headerSearchInput.addEventListener("input", filterEvents);
+    // Запуск поиска при вводе текста
+    headerSearchInput.addEventListener("input", filterEvents);
+  }
 };
 
 // Запуск инициализации страницы событий
