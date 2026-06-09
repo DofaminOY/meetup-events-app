@@ -285,8 +285,15 @@
   }
 
   .header__logo {
-    width: 113px;
-    height: 32px;
+    width: 118.34px;
+    height: 34px;
+    flex-shrink: 0;
+  }
+
+  .header__logo-img {
+    width: 100%;
+    height: auto;
+    display: block;
   }
 
   .header__actions {
@@ -313,7 +320,7 @@
     padding: 8px 16px;
   }
 
-    .header__search {
+  .header__search {
     width: 342px;
     max-width: calc(100vw - 40px);
     height: 42px;
